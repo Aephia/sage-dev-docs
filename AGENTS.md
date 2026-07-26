@@ -67,6 +67,17 @@ inspection.
   use on every page, followed by the abbreviation in parentheses. Common
   developer terms such as URL, HTTP, and API do not need expansion. Treat
   release labels such as C4 as labels rather than inventing expansions for them.
+- Link the first meaningful use of an unfamiliar shared term to
+  `sage-c4-bindings/concepts-and-terms.md`; do not link every repetition.
+- Start gameplay-domain pages with the Star Atlas meaning and a short account-
+  hierarchy block covering the owning program, scope/parent accounts,
+  derivation or discovery method, and adjacent domains.
+- Distinguish runnable examples from scaffolds. A snippet with unresolved
+  signers, addresses, or transaction assembly must say that it is not a
+  copy-paste transaction.
+- Use internal research and knowledge bases to improve reader context, but do
+  not expose internal source names or provenance in published prose. Prefer a
+  current public source link when one helps the reader understand the game.
 - Prefer Markdown, frontmatter, and VitePress config over custom Vue components.
 - Avoid React, Tailwind, CSS-in-JS, and SPA app patterns.
 - Keep unofficial disclaimers visible where useful.

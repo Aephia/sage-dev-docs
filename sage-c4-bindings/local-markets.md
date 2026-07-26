@@ -6,9 +6,20 @@ They connect regional logistics, cargo, pricing, and player economy. For develop
 
 In Star Atlas terms, markets are where extracted or crafted resources can become economic activity. They sit at the intersection of starbase location, cargo ids, ATLAS pricing, escrow, and player-owned inventory.
 
-The KB frames local markets as a way to bring resource trading into the game world instead of treating everything like external OTC or global marketplace activity. That is why market docs should keep the starbase/system context visible.
+Local markets bring trading into the game world instead of treating it like an
+external or global exchange. The generated C4 account is scoped by star system,
+cargo id, and starbase sequence id, so market data must always keep its
+starbase and system context visible. The official
+[Local Markets overview](https://support.staratlas.com/hc/en-us/articles/47053503890579-What-are-Local-Markets-in-Sage-Labs-Starbased)
+also describes markets as location-specific economies.
 
-For C4 context, local markets are regional infrastructure: the KB material describes one Local Marketplace per region, centered on that region's King System, which makes market access part of territory and logistics rather than only price discovery.
+::: info Position in the account hierarchy
+**Owned by:** SAGE program through `@staratlas/dev-sage`<br>
+**Derived from:** StarSystem + cargo id + starbase sequence id<br>
+**Player context:** orders interact with Character and StarbasePlayer cargo<br>
+**Nested state:** bids, asks, makers, escrowed cargo, and the ATLAS vault live inside `LocalMarket`<br>
+**Connects to:** world location, cargo definitions, currency denomination, logistics, and faction territory
+:::
 
 ## Developer use
 

@@ -100,6 +100,35 @@ features:
   </div>
 </div>
 
+## Where the bindings fit
+
+The packages documented here are generated TypeScript **bindings**: typed
+adapters between your application and the Star Atlas programs running on
+z.ink. They know how to decode program accounts, derive addresses when the
+seeds are known, and build transaction instructions.
+
+They are not a wallet, indexer, game server, or safety layer. Your application
+still decides which accounts to discover, what an action means to the player,
+which signer is allowed to authorize it, and whether a transaction should be
+sent.
+
+```mermaid
+flowchart LR
+  app["Your app or agent"]
+  bindings["Generated Star Atlas bindings"]
+  kit["@solana/kit"]
+  rpc["z.ink RPC"]
+  programs["Star Atlas programs"]
+  accounts["Program-owned accounts"]
+
+  app --> bindings --> kit --> rpc --> programs --> accounts
+  accounts --> rpc --> kit --> bindings --> app
+```
+
+Start with the [Beginner Map](/sage-c4-bindings/beginner-map) for the account
+hierarchy, or use the runnable check below to prove that your code is connected
+to the correct deployment.
+
 ## Quick start
 
 ```ts

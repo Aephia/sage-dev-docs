@@ -4,6 +4,10 @@ SAGE C4 actions can move cargo, consume resources, create accounts, change fleet
 
 Use this page as the review layer between "the generated client can build an instruction" and "a user should sign this transaction".
 
+If signer roles, writable accounts, sentinel accounts, or simulation are new,
+see [Programs, Accounts, and Terms](/sage-c4-bindings/concepts-and-terms)
+before adapting the examples.
+
 ## Review Sequence
 
 For any state-changing SAGE C4 workflow:
@@ -205,3 +209,10 @@ Common simulation failure categories:
 | Insufficient resources | Cargo, crew, ATLAS, rent, fuel, or cooldown requirements are not satisfied. |
 
 Link each workflow page back to this review pattern before showing any transaction-building example.
+
+Apply the pattern in the
+[Fleet Creation](/sage-c4-bindings/fleet-creation-workflow),
+[Crafting Process](/sage-c4-bindings/crafting-process-workflow),
+[Scanning](/sage-c4-bindings/scanning-workflow), and
+[Claim Stake Placement](/sage-c4-bindings/claim-stake-placement-workflow)
+workflows.

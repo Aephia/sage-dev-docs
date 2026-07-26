@@ -4,7 +4,21 @@ Crafting is the SAGE production loop that turns input cargo into output cargo th
 
 Recipes define what can be made, crafting habs modify and unlock work, and crafting processes track active jobs.
 
-Star Atlas KB material frames resources as inputs for crafting and starbase work. In SAGE C4, that becomes an on-chain workflow: read a recipe, verify starbase/player/cargo/crew context, create a crafting process, wait for it to mature, then complete or cancel it.
+In SAGE C4, crafting is an on-chain production workflow: read a recipe, verify
+starbase, player, cargo, and crew context, create a crafting process, wait for
+it to mature, then complete or cancel it. Crafted outputs feed fleet logistics,
+starbase upgrades, local markets, and other economy loops.
+
+::: info Position in the account hierarchy
+**Owned by:** SAGE program through `@staratlas/dev-sage`<br>
+**Definition:** `Recipe` is derived from `Game` + recipe id<br>
+**Infrastructure:** `CraftingHabInstance` belongs to a profile in a star system<br>
+**Activity:** `CraftingProcess` links Profile, StarSystem, StarbasePlayer, Recipe, and optional hab context<br>
+**Discovery:** process and hab accounts have no generated PDA helper in this package
+:::
+
+See the [Crafting Process Workflow](/sage-c4-bindings/crafting-process-workflow)
+for the full read, build, review, simulate, and diff sequence.
 
 Read crafting as part of the active economy, not a standalone manufacturing screen. Crafted outputs can support starbase upgrades, infrastructure contracts, trading, upkeep, and other player-driven loops.
 

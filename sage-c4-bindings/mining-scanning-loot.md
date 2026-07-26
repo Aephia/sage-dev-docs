@@ -6,7 +6,20 @@ These loops connect fleet location, scan configuration, resource gathering, loot
 
 In Star Atlas terms, mining and scanning are how players turn fleet activity into resource discovery and extraction. The resulting resources feed transport, crafting, trading, and starbase upkeep.
 
-KB/newsletter context frames scanning as an active discovery loop that replaces older passive discovery assumptions. Do not present scan results as generic random loot; they are tied to fleet location, scan pattern configuration, costs, cooldowns, and the broader resource economy.
+Scanning is an active discovery loop, not generic random loot. Results are tied
+to fleet location, scan-pattern configuration, costs, cooldowns, and the
+broader resource economy. The official C4 guides show the player-facing
+[mining](https://support.staratlas.com/hc/en-us/articles/52272891667987-How-to-Mine-Resources-in-C4-PTR)
+and [scanning](https://support.staratlas.com/hc/en-us/articles/52275761937555-How-to-Scan-in-C4-PTR)
+preconditions that a developer UI should make visible.
+
+::: info Position in the account hierarchy
+**Owned by:** SAGE program through `@staratlas/dev-sage`<br>
+**Actor:** Fleet, authorized through Profile and Character<br>
+**World context:** StarSystem, CelestialBody, RegionTracker, and Game<br>
+**Configuration:** `ScanPattern` is derived from Game + scan-pattern id<br>
+**Result:** `Loot` has no generated PDA helper and must be obtained from results, discovery, or indexing
+:::
 
 ## Developer use
 

@@ -6,7 +6,21 @@ They let players place infrastructure on celestial bodies and produce resources 
 
 In Star Atlas terms, claim stakes connect player-owned infrastructure to celestial bodies, resource production, rent, construction, and eventual logistics through fleets and starbases.
 
-The KB context is that claim stakes are physical infrastructure placed on celestial bodies to access local production. Planet/body tags and building choices matter, so placement examples should show the body, the selected stake definition, the bundled hub building, and the expected building/resource constraints.
+Claim stakes are physical infrastructure placed on celestial bodies to access
+local production. Planet and body tags, building choices, fuel, storage, and
+fleet logistics matter, so placement examples should show the body, selected
+stake definition, bundled hub building, and expected building and resource
+constraints. The official
+[C4 PTR claim-stake guide](https://support.staratlas.com/hc/en-us/articles/52247034465939-How-to-Set-Up-a-Claim-Stake-in-C4-PTR)
+shows where this flow appears in the game client.
+
+::: info Position in the account hierarchy
+**Owned by:** SAGE program through `@staratlas/dev-sage`<br>
+**World context:** one `CelestialBody` inside a `StarSystem` and `Game`<br>
+**Player context:** Profile, Profile Faction, Character, and StarbasePlayer<br>
+**Activity account:** `ClaimStakeInstance` is signer-created and has no generated PDA helper<br>
+**Connects to:** buildings, rent, production, cargo, currency config, and fleet-transfer state
+:::
 
 ## Developer use
 

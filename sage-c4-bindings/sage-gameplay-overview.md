@@ -10,7 +10,11 @@ SAGE C4 is built around fleets, faction conflict, starbases, navigation, resourc
 
 The classic SAGE loop moves players away from passive emissions and toward player-driven activity: gather resources, burn inputs, craft outputs, move goods, defend infrastructure, and make choices that affect faction and local economy state. C4 expands that loop on the z.ink testnet; the generated clients let developers inspect the accounts and instructions behind the browser game.
 
-Iris' Star Atlas KB adds important framing for the newer generated areas: LP/ATLAS rewards are tied to active faction-supporting play, crew is a real gameplay access and utility layer, and C4 territory is organized around regions, King Systems, Core Systems, safe/border state, and faction-controlled warp lanes.
+The newer generated areas belong to the same strategic loop: loyalty and ATLAS
+rewards are tied to active faction-supporting play, crew is a real gameplay
+access and utility layer, and C4 territory is organized around regions, King
+Systems, Core Systems, safe and border state, and faction-controlled warp
+lanes.
 
 ## Program role
 
@@ -177,6 +181,15 @@ Generated anchors:
 - instructions around registration, daily check-in, XP, research, crew, and rentals
 
 Page: [Character and Progression](/sage-c4-bindings/character-progression)
+
+### Extended systems
+
+Crew rosters, faction territory, encounters, combat rewards, loyalty,
+missions, quests, and research extend the same Profile → Character → Game
+hierarchy. They are grouped separately because several flows still need live
+PTR verification before they can support complete send examples.
+
+Page: [Extended C4 Systems](/sage-c4-bindings/extended-systems)
 
 ## Page Pattern
 

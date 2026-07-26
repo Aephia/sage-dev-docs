@@ -4,6 +4,38 @@ Account reads are the first place where generated clients can create false confi
 
 The generated decoder can prove shape after validation, but the raw account response still arrives from an external RPC and should be treated as untrusted input.
 
+An account is one piece of on-chain state. Programs own accounts, but account
+relationships take several forms:
+
+- a PDA can be derived from known seed values
+- a decoded field can store another account address
+- a value can be nested inside its parent rather than stored separately
+- two accounts can meet only in an instruction
+- an account with no known derivation may require discovery or an indexer
+
+The [Account Relationship Map](/sage-c4-bindings/account-relationship-map)
+labels these relationship types across the C4 bindings.
+
+## Where accounts sit in SAGE
+
+```txt
+Player Profile program
+  Profile -> PlayerName / ProfileRoleMembership
+
+Profile Faction program
+  ProfileFactionAccount
+
+SAGE program
+  Game -> world configuration
+  Profile + Game -> Character
+  Game -> StarSystem -> nested Starbase
+  StarSystem + Character -> StarbasePlayer
+  Game + Profile + label -> Fleet
+```
+
+The hierarchy is a navigation aid, not a claim that every arrow is a PDA
+derivation. Check the relationship map before writing address-resolution code.
+
 ## Minimum account checks
 
 Before decoding:
@@ -98,6 +130,10 @@ console.log({
 
 This broad discovery pattern is useful for live PTR audits and integration tests, but it should not replace typed reads in application code.
 
+Use discovery when the application knows a category—such as “all Fleets for
+this game”—but not the exact account addresses. After discovering candidate
+addresses, return to generated fetch helpers for typed decoding.
+
 Fleet discovery has two additional stable prefix filters:
 
 - `gameId` starts at offset `10`, after the discriminator, version, and bump.
@@ -130,3 +166,7 @@ Keep generated decoders behind small adapters once application code grows. That 
 ::: tip
 Prefer boring adapter names over clever abstractions while the generated clients are new. The first useful documentation is usually the code everyone can read under pressure.
 :::
+
+For recurring generated value shapes such as `Option`, `Map`, `Set`, `bigint`,
+and fixed-point wrappers, see the
+[Generated Types Glossary](/sage-c4-bindings/generated-types-glossary).

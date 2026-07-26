@@ -56,15 +56,24 @@ The earlier docs baseline was `@staratlas/dev-sage@0.45.3`. The current line add
 - region order anchors, king system tracking, territory yield, and faction relation config
 - combat stimulants and combat reward settlement
 
-## Reader context from the Star Atlas KB
+## How the newer surface maps to gameplay
 
-Iris' local Star Atlas KB gives useful game framing for the new generated surface:
+- Reward and loyalty accounts belong to SAGE's active-play economy:
+  faction-supporting activity, reward epochs, contributions, banks, and ATLAS
+  settlement.
+- Crew binding and roster helpers are not cosmetic. Ships, crew availability,
+  assignments, stations, perks, and progression meet in fleet and crafting
+  workflows.
+- Faction ownership, standing, relations, markets, and territory helpers belong
+  to the C4 regional-control model around systems, starbases, borders, battle
+  lines, and warp-lane access.
+- Mission and quest helpers expose technical process state, but their generated
+  names alone do not define the complete player-facing rules.
+- Encounter and combat-reward helpers should be introduced as combat and reward
+  plumbing until live C4 behavior provides a verified end-to-end workflow.
 
-- Reward and loyalty accounts should be explained as part of SAGE's active-play economy. The KB's SAGE economics material frames ATLAS emissions around Loyalty Points and faction-supporting activity such as defending, repairing, or upgrading friendly starbases and attacking enemy infrastructure.
-- Crew binding and crew roster helpers are not cosmetic client details. The KB's crew material frames Crew Cards as a major SAGE access and utility layer: ships alone are not the full gameplay gate, and crew traits, stations, perks, and faction assignment matter to how readers should think about crew-aware flows.
-- Faction ownership, standing, relation, market, and territory helpers belong in the C4 regional-control model. The KB's C4 regions material frames regions around King Systems, Core Systems, neutral/border/safe states, starbase ownership, battle lines, and warp-lane control.
-- Mission and quest helpers should be presented carefully. The KB has durable mission/quest context across Star Atlas campaign material, but the generated `MissionProcess` and `QuestProcess` accounts are the technical source for SAGE C4 on-chain semantics.
-- Encounter and combat-reward helpers should be introduced as combat/reward plumbing, not as a fully documented gameplay loop yet. The KB has SAGE combat and reward framing, but the package currently gives the most precise account and instruction shape.
+See [Extended C4 Systems](/sage-c4-bindings/extended-systems) for the reader-
+facing map of these account families.
 
 ## Breaking or migration-sensitive details
 

@@ -4,7 +4,16 @@ Creating a fleet turns ships and starbase context into a new active SAGE C4 flee
 
 Use this as the canonical review pattern for new-account workflows: read context, build instructions, summarize the account set, simulate a full transaction, then show diff targets before asking for a signature.
 
-Do not present fleet creation as only "ship plus name". The KB frames crew as a real SAGE access and utility layer, so fleet setup screens should make crew availability and assignment visible when they affect the intended follow-up action.
+Do not present fleet creation as only “ship plus name.” Crew is a real SAGE
+access and utility layer, so fleet setup screens should make crew availability
+and assignment visible when it affects the intended follow-up action.
+
+::: warning Scaffold, not a copy-paste transaction
+The snippets below show the verified account and review shape. Variables such
+as `walletSigner`, `profileAddress`, and `gameAddress` must come from your
+application's wallet, discovery, and transaction-building flow. The page does
+not assemble or send a complete transaction.
+:::
 
 ## What Create Fleet Touches
 

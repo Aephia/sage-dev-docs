@@ -4,6 +4,11 @@ Use this page when you need real C4 accounts rather than placeholder addresses.
 
 It covers read-only discovery on the public C4 PTR deployment: identifying the network, selecting the correct program, filtering account types, and decoding live fleets with `@staratlas/dev-sage`.
 
+This page is the first complete discovery example after
+[`@solana/kit` Client](/sage-c4-bindings/kit-client). For background on
+discriminators, `memcmp` filters, PDAs, and discovery, see
+[Programs, Accounts, and Terms](/sage-c4-bindings/concepts-and-terms).
+
 ::: warning Deployment scope
 These addresses and layouts describe the C4 public PTR deployment. Other SAGE deployments on the same z.ink chain use different program addresses and can use different account versions. Always make the target program address explicit.
 :::
@@ -290,3 +295,7 @@ During the 2026-07-25 documentation pass:
 - a current Jorvik fleet decoded successfully with `getFleetDecoder()`
 
 Counts, fleet addresses, labels, positions, states, RPC software versions, and account sizes remain point-in-time observations. Re-query them when your application needs current state.
+
+The [Accounts](/sage-c4-bindings/accounts) page generalizes this discovery and
+decoder pattern. The [Fleets](/sage-c4-bindings/fleets) page explains the
+gameplay meaning of the decoded fields and instruction families.

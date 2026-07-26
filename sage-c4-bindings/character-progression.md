@@ -6,7 +6,20 @@ The foundation pages explain identity and faction. This page starts where SAGE a
 
 In Star Atlas terms, `Character` is the game-specific layer of a player profile: the account that lets SAGE track progression, daily check-ins, XP, modifiers, and counts that are separate from the generic identity model.
 
-SAGE rewards progression through activity. KB material ties XP and LP/ATLAS rewards to actions such as combat encounters, repairing or upgrading friendly starbases, and attacking enemy infrastructure. `Character` is one of the accounts where that activity starts to become player-specific state.
+SAGE rewards progression through activity. Experience, loyalty, and ATLAS
+reward flows can involve combat encounters, repairing or upgrading friendly
+starbases, and attacking enemy infrastructure. `Character` is one of the
+accounts where that activity becomes player-specific state.
+
+::: info Position in the account hierarchy
+**Owned by:** SAGE program through `@staratlas/dev-sage`<br>
+**Derived from:** Player Profile + Game<br>
+**Meaning:** the profile's game-specific progression and accounting state<br>
+**Downstream:** helps derive StarbasePlayer and participates in fleet, cargo, crafting, claim-stake, crew, research, and reward instructions
+:::
+
+`Character` is not the wallet and not the generic Player Profile. It is the
+bridge between Star Atlas identity and one SAGE game instance.
 
 ## Developer use
 
@@ -164,3 +177,12 @@ Before sending a progression transaction, show:
 Reading character and progression state is safe. Sending progression instructions can change player state, unlock research, change crew counts, or mutate reward/accounting values.
 
 Keep user-facing flows explicit about account effects. Progression state looks harmless until it changes shared strategic limits or reward eligibility.
+
+## Related pages
+
+- [Read Identity and Faction](/sage-c4-bindings/read-identity-and-faction) for
+  the Profile and Profile Faction layers above Character
+- [Account Relationship Map](/sage-c4-bindings/account-relationship-map) for
+  Character and StarbasePlayer derivation
+- [Extended C4 Systems](/sage-c4-bindings/extended-systems) for crew, research,
+  loyalty, missions, and quests

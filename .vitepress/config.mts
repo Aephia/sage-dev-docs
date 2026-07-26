@@ -7,8 +7,9 @@ const sageSidebar = [
 		items: [
 			{ text: 'Overview', link: '/sage-c4-bindings/' },
 			{ text: 'Beginner Map', link: '/sage-c4-bindings/beginner-map' },
-			{ text: 'Connection', link: '/sage-c4-bindings/connection' },
+			{ text: 'Programs, Accounts, and Terms', link: '/sage-c4-bindings/concepts-and-terms' },
 			{ text: 'Installation', link: '/sage-c4-bindings/installation' },
+			{ text: 'Connection', link: '/sage-c4-bindings/connection' },
 			{ text: '@solana/kit Client', link: '/sage-c4-bindings/kit-client' },
 			{ text: 'Reading Live Game State', link: '/sage-c4-bindings/reading-game-state' }
 		]
@@ -23,16 +24,6 @@ const sageSidebar = [
 		]
 	},
 	{
-		text: 'Build Workflows',
-		items: [
-			{ text: 'Transaction Review and Diffs', link: '/sage-c4-bindings/transaction-review-and-diffs' },
-			{ text: 'Fleet Creation', link: '/sage-c4-bindings/fleet-creation-workflow' },
-			{ text: 'Crafting Process', link: '/sage-c4-bindings/crafting-process-workflow' },
-			{ text: 'Scanning', link: '/sage-c4-bindings/scanning-workflow' },
-			{ text: 'Claim Stake Placement', link: '/sage-c4-bindings/claim-stake-placement-workflow' }
-		]
-	},
-	{
 		text: 'Gameplay Domains',
 		items: [
 			{ text: 'SAGE Gameplay Overview', link: '/sage-c4-bindings/sage-gameplay-overview' },
@@ -43,7 +34,18 @@ const sageSidebar = [
 			{ text: 'Mining, Scanning, and Loot', link: '/sage-c4-bindings/mining-scanning-loot' },
 			{ text: 'Crafting', link: '/sage-c4-bindings/crafting' },
 			{ text: 'Claim Stakes', link: '/sage-c4-bindings/claim-stakes' },
-			{ text: 'Local Markets', link: '/sage-c4-bindings/local-markets' }
+			{ text: 'Local Markets', link: '/sage-c4-bindings/local-markets' },
+			{ text: 'Extended C4 Systems', link: '/sage-c4-bindings/extended-systems' }
+		]
+	},
+	{
+		text: 'Build Workflows',
+		items: [
+			{ text: 'Transaction Review and Diffs', link: '/sage-c4-bindings/transaction-review-and-diffs' },
+			{ text: 'Fleet Creation', link: '/sage-c4-bindings/fleet-creation-workflow' },
+			{ text: 'Crafting Process', link: '/sage-c4-bindings/crafting-process-workflow' },
+			{ text: 'Scanning', link: '/sage-c4-bindings/scanning-workflow' },
+			{ text: 'Claim Stake Placement', link: '/sage-c4-bindings/claim-stake-placement-workflow' }
 		]
 	},
 	{
