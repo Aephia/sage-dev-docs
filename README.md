@@ -49,7 +49,8 @@ formats:
 
 - each HTML page has a matching Markdown URL and a
   `rel="alternate" type="text/markdown"` link
-- documentation pages show **View Markdown** and **Copy Markdown** controls
+- documentation pages show a **Copy** split button with Markdown viewing and
+  ChatGPT/Claude handoff options
 - `/llms.txt` provides a concise agent navigation index
 - `/llms-full.txt` contains the complete documentation bundle
 
