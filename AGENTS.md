@@ -6,7 +6,7 @@ This is an unofficial Star Atlas SAGE C4 developer documentation site.
 
 - VitePress `1.6.4`
 - Vue only as VitePress infrastructure
-- Mermaid `11.12.2` through `vitepress-plugin-mermaid 2.0.17`
+- Mermaid `11.16.0` through `vitepress-plugin-mermaid 2.0.17`
 - Fullscreen diagram viewing through `vitepress-mermaid-zoom 1.0.2`
 - Plain Markdown content by default
 - Custom theme CSS in `.vitepress/theme/custom.css`
@@ -63,6 +63,9 @@ inspection.
 
 - Keep the site visually close to `https://build.staratlas.com/`.
 - Keep content portable so pages can be upstreamed into Star Atlas Build with minimal edits.
+- Write out abbreviations at first use on every page, followed by the
+  abbreviation in parentheses. Treat release labels such as C4 as labels rather
+  than inventing expansions for them.
 - Prefer Markdown, frontmatter, and VitePress config over custom Vue components.
 - Avoid React, Tailwind, CSS-in-JS, and SPA app patterns.
 - Keep unofficial disclaimers visible where useful.

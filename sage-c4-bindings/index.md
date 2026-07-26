@@ -1,6 +1,8 @@
-# SAGE C4 Developer Docs
+# Star Atlas Golden Era (SAGE) C4 Developer Docs
 
-SAGE C4 is a major expansion and update of the Star Atlas strategy game, available in the browser at `https://sage.staratlas.com` and currently running on the z.ink testnet.
+SAGE C4 is a major expansion and update of the Star Atlas strategy game,
+available in the browser at `https://sage.staratlas.com` and currently running
+on the z.ink testnet. C4 is the release label used throughout these docs.
 
 This section focuses on developer integration: what to import, which cluster to use, how to decode on-chain game state safely, and how to structure calls so examples remain easy to verify.
 
@@ -22,7 +24,7 @@ Reference inventory still matters, but it should support the workflow instead of
 
 ## Star Atlas context
 
-SAGE is a browser-based 4X strategy game where actions such as movement, mining,
+SAGE is a browser-based explore, expand, exploit, and exterminate (4X) strategy game where actions such as movement, mining,
 crafting, and transport settle on z.ink, and resources power fleet operations,
 crafting, trading, and starbase upkeep.
 
@@ -32,19 +34,11 @@ Useful official starting points:
 - [What Are Resources in Star Atlas?](https://support.staratlas.com/hc/en-us/articles/47061415287571-What-Are-Resources-in-Star-Atlas)
 - [Star Atlas Build APIs and Data](https://build.staratlas.com/dev-resources/apis-and-data)
 
-## Goals
-
-- Document real integration paths for SAGE C4 PTR on the z.ink testnet.
-- Keep code samples short enough to copy into tools.
-- Explain the game and z.ink/Solana concepts before relying on them.
-- Avoid hiding cluster assumptions in helper magic.
-- Keep generated client usage separate from Aephia-specific application code.
-
-## Current PTR endpoints
+## Current Public Test Realm (PTR) endpoints
 
 | Purpose | Endpoint |
 | --- | --- |
-| HTTP RPC | `https://testnet-rpc.z.ink` |
+| Hypertext Transfer Protocol (HTTP) Remote Procedure Call (RPC) | `https://testnet-rpc.z.ink` |
 | WebSocket RPC | `wss://testnet-rpc.z.ink` |
 | Explorer | `https://explorer.z.ink` |
 
