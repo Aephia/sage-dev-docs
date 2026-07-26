@@ -1,0 +1,27 @@
+{
+	"name": "sage-dev-docs",
+	"version": "0.1.0",
+	"private": true,
+	"description": "Unofficial developer documentation for Star Atlas SAGE C4 generated clients and PTR workflows.",
+	"type": "module",
+	"packageManager": "pnpm@10.29.2",
+	"engines": {
+		"node": ">=20.18.0",
+		"pnpm": ">=10"
+	},
+	"scripts": {
+		"dev": "vitepress dev . --host 0.0.0.0",
+		"build": "vitepress build .",
+		"preview": "vitepress preview . --host 0.0.0.0"
+	},
+	"devDependencies": {
+		"@solana/kit": "^6.1.0",
+		"@staratlas/dev-player-profile": "^0.45.7",
+		"@staratlas/dev-profile-faction": "^0.45.7",
+		"@staratlas/dev-sage": "^0.52.0",
+		"mermaid": "11.12.2",
+		"vitepress": "1.6.4",
+		"vitepress-plugin-mermaid": "2.0.17",
+		"vue": "^3.5.16"
+	}
+}

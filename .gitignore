@@ -1,0 +1,18 @@
+node_modules/
+.vitepress/cache/
+.vitepress/dist/
+
+# Local environment files
+.env
+.env.*
+!.env.example
+*.local
+
+# Logs
+*.log
+*.log.*
+pnpm-debug.log*
+
+# Operating system files
+.DS_Store
+Thumbs.db
