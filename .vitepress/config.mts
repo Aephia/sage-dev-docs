@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress';
+import llmstxt from 'vitepress-plugin-llms';
 import { withMermaid } from 'vitepress-plugin-mermaid';
+import { getMarkdownPath } from './markdown-path';
 
 const sageSidebar = [
 	{
@@ -60,6 +62,14 @@ const sageSidebar = [
 	}
 ];
 
+const agentSidebar = [
+	{
+		text: 'About',
+		items: [{ text: 'Home', link: '/' }]
+	},
+	...sageSidebar
+];
+
 export default withMermaid(defineConfig({
 	lang: 'en-US',
 	title: 'SAGE Dev Docs',
@@ -67,6 +77,36 @@ export default withMermaid(defineConfig({
 	cleanUrls: true,
 	appearance: true,
 	srcExclude: ['README.md', 'AGENTS.md', 'references/**'],
+	transformHead({ page }) {
+		if (page === '404.md') {
+			return [];
+		}
+
+		return [
+			[
+				'link',
+				{
+					rel: 'alternate',
+					type: 'text/markdown',
+					href: getMarkdownPath(page),
+					title: 'Markdown version'
+				}
+			]
+		];
+	},
+	vite: {
+		plugins: [
+			llmstxt({
+				title: 'SAGE Dev Docs',
+				description: 'Community-maintained developer documentation for Star Atlas SAGE C4 and its generated TypeScript bindings on the z.ink PTR.',
+				details: 'Use the page-level Markdown files for focused questions, or llms-full.txt when an assistant needs the complete documentation set.',
+				excludeIndexPage: false,
+				injectLLMHint: false,
+				ignoreFiles: ['README.md', 'AGENTS.md', 'references/**'],
+				sidebar: agentSidebar
+			})
+		]
+	},
 	head: [
 		['meta', { name: 'theme-color', content: '#07111d' }],
 		['meta', { property: 'og:type', content: 'website' }],
