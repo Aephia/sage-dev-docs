@@ -4,6 +4,7 @@ import { useData } from 'vitepress';
 import DefaultTheme from 'vitepress/theme';
 import { useMermaidZoom } from 'vitepress-mermaid-zoom';
 import 'vitepress-mermaid-zoom/style.css';
+import MarkdownActions from './MarkdownActions.vue';
 
 const { page } = useData();
 const pagePath = computed(() => page.value.relativePath);
@@ -69,5 +70,9 @@ onUnmounted(() => {
 </script>
 
 <template>
-	<DefaultTheme.Layout />
+	<DefaultTheme.Layout>
+		<template #doc-before>
+			<MarkdownActions />
+		</template>
+	</DefaultTheme.Layout>
 </template>

@@ -2,7 +2,9 @@
 
 Character and progression accounts connect a Player Profile to SAGE-specific state: check-ins, XP, research, crew counts, ship/cargo counts, modifiers, and ATLAS accounting.
 
-The foundation pages explain identity and faction. This page starts where SAGE adds game-specific progression on top of that identity.
+[Player Profile](/sage-c4-bindings/player-profile) and
+[Profile Faction](/sage-c4-bindings/profile-faction) establish identity and
+faction. SAGE adds game-specific progression on top of that foundation.
 
 In Star Atlas terms, `Character` is the game-specific layer of a player profile: the account that lets SAGE track progression, daily check-ins, XP, modifiers, and counts that are separate from the generic identity model.
 

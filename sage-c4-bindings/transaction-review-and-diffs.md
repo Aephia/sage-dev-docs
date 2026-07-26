@@ -141,7 +141,8 @@ export async function readSnapshots(addresses: Address[]) {
 }
 ```
 
-Keep raw snapshots out of UI prompts. Decode only the accounts the page needs, and display a small domain diff instead of dumping base64 data.
+Keep raw snapshots out of UI prompts. Decode only the accounts the application
+needs, and display a small domain diff instead of dumping base64 data.
 
 ## Produce a Domain Diff
 
@@ -193,7 +194,9 @@ console.log({
 });
 ```
 
-Some RPCs still require a structurally valid signed transaction even when `sigVerify` is false. For docs and tooling, treat simulation as the final pre-wallet check rather than a substitute for understanding the instruction.
+Some RPCs still require a structurally valid signed transaction even when
+`sigVerify` is false. Treat simulation as the final pre-wallet check rather
+than a substitute for understanding the instruction.
 
 ## Failure Notes
 
@@ -207,8 +210,6 @@ Common simulation failure categories:
 | Permission failure | `keyIndex` does not point to a profile key with the required permission. |
 | Stale state | Fleet, starbase, crafting, scan, or claim-stake state changed since the UI read it. |
 | Insufficient resources | Cargo, crew, ATLAS, rent, fuel, or cooldown requirements are not satisfied. |
-
-Link each workflow page back to this review pattern before showing any transaction-building example.
 
 Apply the pattern in the
 [Fleet Creation](/sage-c4-bindings/fleet-creation-workflow),

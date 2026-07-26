@@ -1,5 +1,7 @@
 ---
 layout: home
+title: SAGE Dev Docs
+description: Community-maintained developer documentation for Star Atlas SAGE C4 and its generated TypeScript bindings on the z.ink PTR.
 
 hero:
   name: SAGE Dev Docs

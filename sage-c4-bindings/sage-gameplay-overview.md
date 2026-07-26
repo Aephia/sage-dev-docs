@@ -61,7 +61,9 @@ SAGE gameplay accounts do not replace the foundation programs:
 | Faction | Profile Faction | Faction selected by a profile |
 | Gameplay | SAGE | Fleets, world state, economy loops, progression, and combat |
 
-When a SAGE page mentions a player, profile, or faction, link back to the foundation pages instead of redefining those concepts.
+See [Player Profile](/sage-c4-bindings/player-profile) and
+[Profile Faction](/sage-c4-bindings/profile-faction) for the identity,
+authority, and faction context reused by SAGE gameplay accounts.
 
 ## Gameplay Domains
 
@@ -100,7 +102,7 @@ Generated anchors:
 - account: `CraftingProcess`
 - instructions around starting, stopping, closing, and managing crafting processes
 
-Page: [Crafting](/sage-c4-bindings/crafting)
+Related guide: [Crafting](/sage-c4-bindings/crafting)
 
 Workflow: [Crafting Process Workflow](/sage-c4-bindings/crafting-process-workflow)
 
@@ -113,7 +115,7 @@ Generated anchors:
 - account: `ClaimStakeInstance`
 - instructions around stake creation, updates, rent, resource extraction, and fleet transfer
 
-Page: [Claim Stakes](/sage-c4-bindings/claim-stakes)
+Related guide: [Claim Stakes](/sage-c4-bindings/claim-stakes)
 
 Workflow: [Claim Stake Placement Workflow](/sage-c4-bindings/claim-stake-placement-workflow)
 
@@ -127,7 +129,7 @@ Generated anchors:
 - PDA helper: `findLocalMarketPda`
 - instructions around market creation, close, order placement, cancellation, and cleanup
 
-Page: [Local Markets](/sage-c4-bindings/local-markets)
+Related guide: [Local Markets](/sage-c4-bindings/local-markets)
 
 ### World data
 
@@ -141,7 +143,7 @@ Generated anchors:
 - account: `RegionTracker`
 - upload accounts: `RegionBorderUpload`, `ShipDefinitionUpload`
 
-Page: [World Data](/sage-c4-bindings/world-data)
+Related guide: [World Data](/sage-c4-bindings/world-data)
 
 ### Mining, scanning, and loot
 
@@ -154,7 +156,7 @@ Generated anchors:
 - account: `Loot`
 - instructions around mining, scanning, retrieving loot, and scan-pattern admin
 
-Page: [Mining, Scanning, and Loot](/sage-c4-bindings/mining-scanning-loot)
+Related guide: [Mining, Scanning, and Loot](/sage-c4-bindings/mining-scanning-loot)
 
 Workflow: [Scanning Workflow](/sage-c4-bindings/scanning-workflow)
 
@@ -168,7 +170,7 @@ Generated anchors:
 - account: `CurrencyConfigCache`
 - types: `CargoPod`, `SingleCargo`, `CargoType`, `Resources`, `Currencies`
 
-Page: [Cargo and Currency](/sage-c4-bindings/cargo-and-currency)
+Related guide: [Cargo and Currency](/sage-c4-bindings/cargo-and-currency)
 
 ### Character and progression
 
@@ -180,22 +182,13 @@ Generated anchors:
 - PDA helper: `findCharacterPda`
 - instructions around registration, daily check-in, XP, research, crew, and rentals
 
-Page: [Character and Progression](/sage-c4-bindings/character-progression)
+Related guide: [Character and Progression](/sage-c4-bindings/character-progression)
 
 ### Extended systems
 
 Crew rosters, faction territory, encounters, combat rewards, loyalty,
 missions, quests, and research extend the same Profile → Character → Game
 hierarchy. They are grouped separately because several flows still need live
-PTR verification before they can support complete send examples.
+PTR verification before they are safe to send.
 
-Page: [Extended C4 Systems](/sage-c4-bindings/extended-systems)
-
-## Page Pattern
-
-For every gameplay domain page:
-
-1. Start with the relevant game concept.
-2. List the generated accounts and instructions.
-3. Show one read-only account example.
-4. Only then add state-changing examples with signer, account, and simulation notes.
+Related guide: [Extended C4 Systems](/sage-c4-bindings/extended-systems)

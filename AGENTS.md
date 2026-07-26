@@ -8,6 +8,7 @@ This is an unofficial Star Atlas SAGE C4 developer documentation site.
 - Vue only as VitePress infrastructure
 - Mermaid `11.16.0` through `vitepress-plugin-mermaid 2.0.17`
 - Fullscreen diagram viewing through `vitepress-mermaid-zoom 1.0.2`
+- Agent-friendly Markdown output through `vitepress-plugin-llms 1.13.3`
 - Plain Markdown content by default
 - Custom theme CSS in `.vitepress/theme/custom.css`
 - Node.js `>=20.18.0`
@@ -20,6 +21,8 @@ This is an unofficial Star Atlas SAGE C4 developer documentation site.
 - `references/` contains authoring evidence and historical source material. It
   is excluded from the VitePress build and is not canonical documentation.
 - `.vitepress/config.mts` owns navigation, sidebars, and site metadata.
+- `.vitepress/markdown-path.ts` keeps HTML alternate links and page controls
+  aligned with generated Markdown routes.
 - `.vitepress/theme/` contains the small custom theme surface.
 
 The Mermaid renderer asks Vite to optimize several Mermaid dependencies by
@@ -85,4 +88,8 @@ inspection.
   API documentation without verifying their claims.
 - Update `.vitepress/config.mts` when adding, removing, or relocating a
   published page.
+- Keep each generated page-level Markdown URL, its HTML
+  `rel="alternate"` link, and the visible copy/view controls aligned.
+- Treat `.vitepress/dist/*.md`, `llms.txt`, and `llms-full.txt` as build
+  artifacts. Edit the source Markdown instead of generated output.
 - Run `pnpm build` before considering changes complete.

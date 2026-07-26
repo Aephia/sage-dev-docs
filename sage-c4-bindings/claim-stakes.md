@@ -8,7 +8,7 @@ In Star Atlas terms, claim stakes connect player-owned infrastructure to celesti
 
 Claim stakes are physical infrastructure placed on celestial bodies to access
 local production. Planet and body tags, building choices, fuel, storage, and
-fleet logistics matter, so placement examples should show the body, selected
+fleet logistics matter, so a placement review should show the body, selected
 stake definition, bundled hub building, and expected building and resource
 constraints. The official
 [C4 PTR claim-stake guide](https://support.staratlas.com/hc/en-us/articles/52247034465939-How-to-Set-Up-a-Claim-Stake-in-C4-PTR)
@@ -249,4 +249,5 @@ Before sending a production transaction, show:
 
 Reading claim-stake accounts is safe. Sending claim-stake instructions can place infrastructure, consume rent, alter production, mutate building layouts, or move resources through fleets.
 
-Keep send examples conservative until they include concrete PTR simulations and before/after account diffs.
+Do not send a claim-stake transaction without a concrete PTR simulation and a
+before/after account diff.

@@ -4,7 +4,9 @@ SAGE C4 is a major expansion and update of the Star Atlas strategy game,
 available in the browser at `https://sage.staratlas.com` and currently running
 on the z.ink testnet. C4 is the release label used throughout these docs.
 
-This section focuses on developer integration: what to import, which cluster to use, how to decode on-chain game state safely, and how to structure calls so examples remain easy to verify.
+This section focuses on developer integration: what to import, which cluster
+to use, how to decode on-chain game state safely, and how to structure calls
+so results remain easy to verify.
 
 If you are new to z.ink/Solana development or SAGE, start with the [Beginner Map](/sage-c4-bindings/beginner-map). It explains the basic nouns before the code samples start using them.
 
@@ -88,7 +90,9 @@ export const sagePtr = {
 ```
 
 ::: tip
-Keep the endpoint visible in examples while the PTR is moving. Hidden global cluster config is convenient later, but noisy while debugging early integrations.
+Keep the endpoint explicit in early integration code while the PTR is moving.
+Hidden global cluster configuration is convenient later, but makes initial
+debugging harder.
 :::
 
 ## Reading paths

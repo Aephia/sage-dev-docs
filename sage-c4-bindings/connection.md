@@ -79,5 +79,6 @@ The genesis hash is the stronger cluster identity check. An endpoint can be heal
 For the C4 program, game account, and query examples, continue with [Reading Live Game State](/sage-c4-bindings/reading-game-state).
 
 ::: warning PTR behavior
-Treat every PTR endpoint as mutable. Pinning these constants in docs is useful for discoverability, but application code should keep cluster config in one place.
+Treat every PTR endpoint as mutable. Keep cluster configuration in one
+application module so an endpoint change requires one update.
 :::

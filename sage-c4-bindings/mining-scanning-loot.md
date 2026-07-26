@@ -329,4 +329,5 @@ Before sending a mining or scanning transaction, show:
 
 Reading scan patterns and loot is safe. Sending mining, scanning, or retrieve-loot instructions can consume resources, change fleet state, alter cooldowns, mint or move loot-like cargo, and affect progression.
 
-Keep send examples in review mode until PTR simulations prove exact account effects.
+Keep mining, scanning, and loot instructions in review mode until PTR
+simulations establish their exact account effects.

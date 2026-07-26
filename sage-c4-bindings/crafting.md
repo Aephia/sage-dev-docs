@@ -281,4 +281,5 @@ Before sending a crafting transaction, show:
 
 Reading crafting accounts is safe. Sending crafting instructions can lock cargo, consume resources, change rent state, alter usage counts, or mutate player-owned infrastructure.
 
-Do not use send examples until PTR behavior has been verified with a transaction simulation and a before/after account diff.
+Do not send a crafting transaction until PTR behavior has been verified with a
+simulation and a before/after account diff.

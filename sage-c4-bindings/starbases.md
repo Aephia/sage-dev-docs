@@ -221,7 +221,9 @@ Starbase-related instruction builders fall into several groups.
 | Combat | `attackStarbase` | Attack a starbase using a fleet, faction relation/ownership state, captor treasury, king tracker, and reward config context. |
 | Sync | `syncStarbaseCargoWithGame` | Keep starbase cargo state aligned with game config. |
 
-Many of these instructions include Player Profile validation accounts. Any transaction example should show signers, `keyIndex`, writable accounts, and simulation notes before it asks for a wallet signature.
+Many of these instructions include Player Profile validation accounts. Before
+requesting a wallet signature, display the signers, `keyIndex`, writable
+accounts, and simulation result.
 
 ## Instruction example: contribute upgrade resources
 
@@ -263,7 +265,8 @@ Before sending a starbase transaction, show:
 
 Reading starbase accounts is safe. Sending starbase instructions can change shared strategic state, consume resources, affect faction conflict, or alter upgrade progress.
 
-Keep starbase send examples conservative until PTR behavior has been verified directly.
+Do not send a starbase transaction until its PTR behavior has been verified
+directly.
 
 ## Related pages
 

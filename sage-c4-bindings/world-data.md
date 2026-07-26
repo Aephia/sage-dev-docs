@@ -218,7 +218,8 @@ World-data instruction builders are mostly admin/configuration flows.
 
 Reading world-data accounts is safe. Sending world-data instructions is admin-level work: it can change shared map state, game rules, ship definitions, starbase topology, or production tables.
 
-Do not use send examples for these instructions until the authority model, writable accounts, and PTR simulations are clear.
+Do not send these instructions until the authority model, writable accounts,
+and PTR simulation results are understood.
 
 ## Related pages
 

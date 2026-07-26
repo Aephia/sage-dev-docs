@@ -223,4 +223,5 @@ Before sending a create-fleet transaction, show:
 
 Reading fleets is safe. Sending fleet instructions can change game state, cargo, ship assignment, combat state, or resource flows.
 
-For any signing example, show the transaction summary first. Do not hide signer, writable account, cargo, or asset movement behind helper magic.
+Before requesting a signature, show the transaction summary. Do not hide
+signers, writable accounts, cargo, or asset movement behind helper magic.

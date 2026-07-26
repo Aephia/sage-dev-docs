@@ -42,6 +42,21 @@ Run the production build before submitting changes:
 pnpm build
 ```
 
+## Agent-friendly output
+
+The production build publishes the documentation in several complementary
+formats:
+
+- each HTML page has a matching Markdown URL and a
+  `rel="alternate" type="text/markdown"` link
+- documentation pages show a **Copy** split button with Markdown viewing and
+  ChatGPT/Claude handoff options
+- `/llms.txt` provides a concise agent navigation index
+- `/llms-full.txt` contains the complete documentation bundle
+
+These files are generated into `.vitepress/dist/` from the canonical source
+Markdown. Do not edit the generated copies.
+
 ## Project structure
 
 | Path | Purpose |
@@ -50,6 +65,7 @@ pnpm build
 | `sage-c4-bindings/` | Published integration guides, workflows, and references |
 | `references/` | Authoring evidence and historical source material; excluded from the published site |
 | `.vitepress/config.mts` | Navigation, sidebar, metadata, and VitePress configuration |
+| `.vitepress/markdown-path.ts` | Shared mapping from VitePress source pages to generated Markdown URLs |
 | `.vitepress/theme/` | Small theme and CSS customizations |
 | `public/` | Static images copied into the built site |
 

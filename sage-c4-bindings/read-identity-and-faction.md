@@ -160,7 +160,8 @@ if (fleet.exists) {
 
 ## Safety notes
 
-Read examples can be run freely against PTR RPC. Do not turn these snippets into transaction builders until the docs also show:
+These read examples can be run freely against PTR RPC. Before turning them
+into transaction builders, identify:
 
 - the signer or wallet that is expected to authorize the action
 - which profile key or role grants permission
