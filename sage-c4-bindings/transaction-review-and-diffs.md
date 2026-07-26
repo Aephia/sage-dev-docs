@@ -48,7 +48,9 @@ export function summarizeInstruction(
 }
 ```
 
-Render the account list in the same order the instruction uses. Account order matters to Solana programs and is often the first clue when a simulation fails.
+Render the account list in the same order the instruction uses. Account order
+matters to z.ink/Solana programs and is often the first clue when a simulation
+fails.
 
 ## Classify Review Risk
 

@@ -4,7 +4,7 @@ SAGE C4 is a major expansion and update of the Star Atlas strategy game, availab
 
 This section focuses on developer integration: what to import, which cluster to use, how to decode on-chain game state safely, and how to structure calls so examples remain easy to verify.
 
-If you are new to Solana or SAGE, start with the [Beginner Map](/sage-c4-bindings/beginner-map). It explains the basic nouns before the code samples start using them.
+If you are new to z.ink/Solana development or SAGE, start with the [Beginner Map](/sage-c4-bindings/beginner-map). It explains the basic nouns before the code samples start using them.
 
 ## Reader promise
 
@@ -22,7 +22,9 @@ Reference inventory still matters, but it should support the workflow instead of
 
 ## Star Atlas context
 
-The game context comes from Star Atlas SAGE and KB material: SAGE is a browser-based 4X strategy game where actions such as movement, mining, crafting, and transport settle on Solana, and resources power fleet operations, crafting, trading, and starbase upkeep.
+SAGE is a browser-based 4X strategy game where actions such as movement, mining,
+crafting, and transport settle on z.ink, and resources power fleet operations,
+crafting, trading, and starbase upkeep.
 
 Useful official starting points:
 
@@ -34,7 +36,7 @@ Useful official starting points:
 
 - Document real integration paths for SAGE C4 PTR on the z.ink testnet.
 - Keep code samples short enough to copy into tools.
-- Explain the game and Solana concepts before relying on them.
+- Explain the game and z.ink/Solana concepts before relying on them.
 - Avoid hiding cluster assumptions in helper magic.
 - Keep generated client usage separate from Aephia-specific application code.
 

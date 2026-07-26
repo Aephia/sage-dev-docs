@@ -10,7 +10,8 @@ of which can change.
 
 The site uses VitePress and keeps reader-facing content in portable Markdown so
 pages can be upstreamed into [Star Atlas Build](https://build.staratlas.com/)
-with minimal editing.
+with minimal editing. Mermaid relationship diagrams can be opened in a
+fullscreen overlay for closer inspection.
 
 ## Prerequisites
 

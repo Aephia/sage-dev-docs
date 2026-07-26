@@ -27,7 +27,7 @@ The package is Codama-generated, depends on `@solana/program-client-core`, and u
 | Package | `@staratlas/dev-player-profile` |
 | Version | `0.45.7` |
 | License | `Apache-2.0` |
-| Generator | Codama-generated Solana client |
+| Generator | Codama-generated z.ink/Solana client |
 | Dependency | `@solana/program-client-core ^6.1.0` |
 | Peer dependency | `@solana/kit ^6.1.0` |
 
@@ -405,4 +405,6 @@ Once those are clear, SAGE pages can reference profile validation without re-exp
 
 ## Star Atlas Identity Layer
 
-Player Profile is shared identity and authorization infrastructure across Star Atlas Solana programs. SAGE uses it to validate which profile is acting and which profile key is authorizing a generated instruction.
+Player Profile is shared identity and authorization infrastructure across Star
+Atlas programs on z.ink. SAGE uses it to validate which profile is acting and
+which profile key is authorizing a generated instruction.

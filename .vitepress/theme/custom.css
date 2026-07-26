@@ -238,6 +238,11 @@ h6,
 	color: var(--sa-cyan-soft);
 }
 
+.mermaid[data-zoomable]:focus-visible {
+	outline: 0.125rem solid var(--vp-c-brand-1);
+	outline-offset: 0.25rem;
+}
+
 .vp-doc blockquote {
 	border-left: 1px solid rgba(114, 231, 255, 0.42);
 	background: linear-gradient(135deg, rgba(0, 217, 255, 0.08), rgba(123, 97, 255, 0.05));
