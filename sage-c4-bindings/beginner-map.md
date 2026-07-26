@@ -1,8 +1,12 @@
 # Beginner Map
 
-This section is for developers who are new to SAGE, new to Solana, or both.
+This section is for developers who are new to Star Atlas Golden Era (SAGE),
+new to z.ink/Solana development, or both. C4 is the current SAGE release label.
 
-The short version: the TypeScript packages let you read and build instructions for Star Atlas programs on Solana. SAGE C4 is browser strategy gameplay where fleets, resources, crafting, territory, and faction identity settle into on-chain state. Before you send anything, learn the nouns.
+The short version: the TypeScript packages let you read and build instructions
+for Star Atlas programs on z.ink. SAGE C4 is browser strategy gameplay where
+fleets, resources, crafting, territory, and faction identity settle into
+on-chain state. Before you send anything, learn the nouns.
 
 ## The big picture
 
@@ -24,11 +28,12 @@ A wallet is the key that can sign. A profile is the Star Atlas identity. A facti
 
 ## Words you will see everywhere
 
-### RPC
+### Remote Procedure Call (RPC)
 
-An RPC endpoint is the URL your code talks to when it reads Solana account data or sends transactions.
+An RPC endpoint is the URL your code talks to when it reads z.ink account data
+or sends transactions.
 
-For SAGE C4 PTR, use:
+For the SAGE C4 Public Test Realm (PTR), use:
 
 ```txt
 https://testnet-rpc.z.ink
@@ -36,19 +41,21 @@ https://testnet-rpc.z.ink
 
 ### Program
 
-A Solana program is on-chain code. In these docs, the important programs are SAGE, Player Profile, and Profile Faction.
+A z.ink/Solana program is on-chain code. In these docs, the important programs
+are SAGE, Player Profile, and Profile Faction.
 
 ### Account
 
-A Solana account stores data. A SAGE fleet, a player profile, and a profile's faction are all accounts.
+A z.ink/Solana account stores data. A SAGE fleet, a player profile, and a
+profile's faction are all accounts.
 
 ### Address
 
 An address identifies a program or account. It looks like a long base58 string.
 
-### PDA
+### Program Derived Address (PDA)
 
-A PDA is a Program Derived Address. It is an account address calculated from known inputs, called seeds.
+A PDA is an account address calculated from known inputs, called seeds.
 
 For example, a profile's faction account can be derived from the profile address. You do not have to search the whole chain if you already know the profile.
 
@@ -60,7 +67,9 @@ Prefer `fetchMaybe...` while exploring because missing accounts become a normal 
 
 ### Instruction
 
-An instruction asks a Solana program to do something. Reading an account is harmless. Sending an instruction can change game state, move assets, spend tokens, or require a wallet signature.
+An instruction asks a z.ink/Solana program to do something. Reading an account
+is harmless. Sending an instruction can change game state, move assets, spend
+tokens, or require a wallet signature.
 
 These docs start with read-only examples first.
 

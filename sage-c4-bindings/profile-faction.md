@@ -26,7 +26,7 @@ The package is Codama-generated, depends on `@staratlas/dev-player-profile` and 
 | Package | `@staratlas/dev-profile-faction` |
 | Version | `0.45.7` |
 | License | `Apache-2.0` |
-| Generator | Codama-generated Solana client |
+| Generator | Codama-generated z.ink/Solana client |
 | Dependencies | `@staratlas/dev-player-profile ^0.45.7`, `@solana/program-client-core ^6.1.0` |
 | Peer dependency | `@solana/kit ^6.1.0` |
 

@@ -103,12 +103,34 @@ features:
 ## Quick start
 
 ```ts
+import { address, createSolanaRpc } from '@solana/kit';
+
 export const sagePtrCluster = {
 	http: 'https://testnet-rpc.z.ink',
 	ws: 'wss://testnet-rpc.z.ink',
-	explorer: 'https://explorer.z.ink'
+	explorer: 'https://explorer.z.ink',
+	commitment: 'confirmed'
 } as const;
+
+const rpc = createSolanaRpc(sagePtrCluster.http);
+const game = address('EKEj47SzaCjPM3m4T4vRXrrsVtkEmiNgPMMFye3AkXj4');
+const sageProgram = address('C4SAgeKLgb3pTLWhVr6NRwWyYFuTR7ZeSXFrzoLwfMzF');
+
+const { value: account } = await rpc.getAccountInfo(game, {
+	commitment: sagePtrCluster.commitment,
+	encoding: 'base64',
+	dataSlice: { offset: 0, length: 0 }
+}).send();
+
+if (!account || account.owner !== sageProgram) {
+	throw new Error('C4 Game account not found on this cluster');
+}
 ```
+
+This confirms that the known C4 Game account exists on z.ink and belongs to the
+expected SAGE program without downloading its roughly 2.5 MB data buffer. Continue
+with [Reading Live Game State](/sage-c4-bindings/reading-game-state) to discover
+and decode gameplay accounts.
 
 <div class="home-shell">
   <p class="eyebrow">Community Created</p>

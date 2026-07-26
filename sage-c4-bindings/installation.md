@@ -4,7 +4,7 @@ Install the generated clients for SAGE C4 together with the `@solana/kit` peer d
 
 This gives your TypeScript code three things:
 
-- a Solana client library, `@solana/kit`
+- a z.ink/Solana client library, `@solana/kit`
 - generated Star Atlas program clients
 - typed helpers for reading accounts and building instructions
 
@@ -19,10 +19,13 @@ Use the current C4 package line:
 | `@staratlas/dev-sage` | `0.52.0` | Main SAGE gameplay program client |
 | `@staratlas/dev-player-profile` | `0.45.7` | Player identity, auth keys, roles, and permissions |
 | `@staratlas/dev-profile-faction` | `0.45.7` | Profile-to-faction selection state |
-| `@solana/kit` | `^6.1.0` peer range; `6.10.0` inspected locally | Solana RPC, address, account, codec, and transaction primitives |
+| `@solana/kit` | `^6.1.0` peer range; `6.10.0` inspected locally | z.ink/Solana RPC, address, account, codec, and transaction primitives |
 
 ::: warning Peer dependency
-The current Star Atlas C4 packages peer-depend on `@solana/kit ^6.1.0`. Keep the Solana kit major version aligned across all generated clients; mixing the old `^5.x` line with current SAGE packages will produce incompatible peer dependencies.
+The current Star Atlas C4 packages peer-depend on `@solana/kit ^6.1.0`. Keep
+the `@solana/kit` major version aligned across all generated clients; mixing the
+old `^5.x` line with current SAGE packages will produce incompatible peer
+dependencies.
 :::
 
 ::: tip Current generated surface
