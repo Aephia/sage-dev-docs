@@ -38,7 +38,7 @@ Useful official starting points:
 
 | Purpose | Endpoint |
 | --- | --- |
-| Hypertext Transfer Protocol (HTTP) Remote Procedure Call (RPC) | `https://testnet-rpc.z.ink` |
+| HTTP Remote Procedure Call (RPC) | `https://testnet-rpc.z.ink` |
 | WebSocket RPC | `wss://testnet-rpc.z.ink` |
 | Explorer | `https://explorer.z.ink` |
 

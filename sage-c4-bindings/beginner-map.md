@@ -30,8 +30,8 @@ A wallet is the key that can sign. A profile is the Star Atlas identity. A facti
 
 ### Remote Procedure Call (RPC)
 
-An RPC endpoint is the Uniform Resource Locator (URL) your code talks to when
-it reads z.ink account data or sends transactions.
+An RPC endpoint is the URL your code talks to when it reads z.ink account data
+or sends transactions.
 
 For the SAGE C4 Public Test Realm (PTR), use:
 
