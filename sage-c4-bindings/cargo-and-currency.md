@@ -166,7 +166,9 @@ console.log({
 
 ## Canonical flow: move cargo inside a fleet
 
-This is the preferred shape for state-changing examples in these docs: read the state, build the instruction, summarize it, then simulate a full transaction before asking a wallet to sign.
+A safe state-changing flow reads current state, builds the instruction,
+summarizes it, then simulates a full transaction before asking a wallet to
+sign.
 
 The example mirrors a live PTR pattern where cargo moved between fleet cargo pods.
 
@@ -285,7 +287,8 @@ fleet state: unchanged unless simulation logs say otherwise
 
 Reading caches is safe. Sending cargo or currency instructions can move assets, consume resources, update vaults, or change cache/config state.
 
-Cargo examples should always name the source, destination, cargo id, amount, signer, writable accounts, and simulation output before they become send examples.
+Before sending a cargo instruction, show the source, destination, cargo id,
+amount, signer, writable accounts, and simulation output.
 
 ## Related pages
 

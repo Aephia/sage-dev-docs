@@ -164,7 +164,8 @@ if (profileFaction.exists) {
 Keep generated decoders behind small adapters once application code grows. That gives the rest of the app a clean domain object and keeps RPC validation close to the wire.
 
 ::: tip
-Prefer boring adapter names over clever abstractions while the generated clients are new. The first useful documentation is usually the code everyone can read under pressure.
+Prefer boring adapter names over clever abstractions while the generated
+clients are new. Predictable decoding code is easier to debug under pressure.
 :::
 
 For recurring generated value shapes such as `Option`, `Map`, `Set`, `bigint`,

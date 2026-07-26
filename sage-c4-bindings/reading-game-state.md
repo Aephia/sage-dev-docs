@@ -285,7 +285,7 @@ Because Nemesis labels and accounts churn, derive a PDA when you know the curren
 
 ## Verification boundaries
 
-During the 2026-07-25 documentation pass:
+Verified on 2026-07-25:
 
 - npm still reported `@staratlas/dev-sage@0.52.0` as latest
 - the discriminator table matched the generated package exports

@@ -89,9 +89,10 @@ Start with read-only account calls:
 - they do not require a signer
 - they do not move assets
 - they are easier to compare against the PTR UI
-- they give you real account data for future transaction examples
+- they give you real account data for later transaction flows
 
-State-changing instruction examples should come after the read path is documented and after every account role is clear.
+Build state-changing instructions only after the read path works and every
+account role is clear.
 
 See [Programs, Accounts, and Terms](/sage-c4-bindings/concepts-and-terms) for
 the distinction between programs, accounts, PDAs, discovery, and instruction

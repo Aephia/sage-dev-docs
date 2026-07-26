@@ -1,8 +1,7 @@
 # Programs, Accounts, and Terms
 
-Use this page when a generated-client page introduces a term before the
-relationship is obvious. It covers the shared vocabulary of the Star Atlas
-Golden Era (SAGE) C4 bindings; domain pages explain the game-specific meaning.
+This reference defines the shared vocabulary of the Star Atlas Golden Era
+(SAGE) C4 bindings. Domain guides explain how each concept applies to the game.
 
 ## Application layers
 

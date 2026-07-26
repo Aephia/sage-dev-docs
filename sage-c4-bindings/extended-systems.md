@@ -5,10 +5,10 @@ stakes, markets, mining, and scanning. The current Star Atlas Golden Era
 (SAGE) C4 binding also exposes newer account families for crew, territory,
 encounters, rewards, missions, and quests.
 
-This page places those families in the account hierarchy without pretending
-that generated names alone define a complete player-facing workflow. Treat it
-as a map to the binding surface; use current C4 behavior, simulation, and
-before/after account inspection before publishing a send flow.
+The sections below place those families in the account hierarchy without
+pretending that generated names alone define a complete player-facing
+workflow. Use current C4 behavior, simulation, and before/after account
+inspection before sending a transaction.
 
 ## How the systems connect
 
@@ -118,10 +118,10 @@ Important generated anchors:
   `tradeEncounter`, `attackFleet`, `attackStarbase`,
   `resolveCombatRewards`, `sweepExpiredCombatRewardLoot`
 
-The [Scanning Workflow](/sage-c4-bindings/scanning-workflow) already shows the
-optional encounter accounts used when a scan arms this state. A future
-end-to-end encounter guide should begin from a verified live trace rather than
-inferring the flow solely from builder names.
+The [Scanning Workflow](/sage-c4-bindings/scanning-workflow) shows the optional
+encounter accounts used when a scan arms this state. Do not infer an end-to-end
+encounter flow from builder names alone; begin implementation from a verified
+live trace.
 
 ## Rewards, loyalty, and ATLAS
 
@@ -167,7 +167,7 @@ Important generated instructions include `startMission`, `armMissionSettle`,
 `settleMission`, `abortMission`, `startQuest`, `completeQuest`, and
 `cancelQuest`.
 
-Before documenting these as runnable workflows, verify:
+Before implementing these as runnable workflows, verify:
 
 - where the player selects the mission or quest
 - which off-chain catalog or UI data supplies its configuration

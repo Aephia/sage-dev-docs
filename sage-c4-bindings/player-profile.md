@@ -63,7 +63,9 @@ Player Profile provides the account model for Star Atlas player identity and aut
 - profile-role memberships
 - profile keys and permission flags
 
-SAGE instructions commonly need profile validation accounts or profile-related authority checks. Treat this package as the first foundation layer before documenting fleet, cargo, crafting, combat, or claim-stake flows.
+SAGE instructions commonly need profile validation accounts or profile-related
+authority checks. Treat this package as the first foundation layer before
+building fleet, cargo, crafting, combat, or claim-stake flows.
 
 ## Ecosystem role
 
@@ -76,7 +78,8 @@ This page covers:
 - how profile keys and roles model delegated authority
 - which permissions a SAGE action expects before an instruction is built
 
-Once profile authority is clear, later SAGE pages can focus on the gameplay domain they cover.
+Once profile authority is clear, the gameplay guides can treat profile
+validation as shared context.
 
 ## Authority model
 
@@ -228,7 +231,8 @@ const [playerNameAddress] = await findPlayerNamePda({
 
 The generated package exposes instruction builders named `getXInstruction`, and parsers named `parseXInstruction`.
 
-Read-only examples should come first. These instruction builders create transaction instructions, but they do not send them by themselves.
+Start with read-only calls. These instruction builders create transaction
+instructions, but they do not send them by themselves.
 
 | Family | Instructions | What they manage |
 | --- | --- | --- |
@@ -315,7 +319,8 @@ console.log({
 });
 ```
 
-Use this kind of check before showing a SAGE instruction. It gives the user a concrete authority review instead of a vague "connect wallet" prompt.
+Run this check before building a SAGE instruction. It gives the user a concrete
+authority review instead of a vague "connect wallet" prompt.
 
 ## Instruction example
 
@@ -378,7 +383,9 @@ The current permission flags are:
 | `REMOVE_MEMBER` | Remove a member from a role. |
 | `DRAIN_SOL_VAULT` | Withdraw from the SOL vault. |
 
-Profile permissions are security-sensitive. Any example that changes keys, roles, memberships, authorizers, or authentication settings must show the account metas plainly and recommend simulation before signing.
+Profile permissions are security-sensitive. Before changing keys, roles,
+memberships, authorizers, or authentication settings, display the account
+metas plainly and simulate the transaction.
 
 ## Errors
 
@@ -404,9 +411,9 @@ Common beginner-facing errors include:
 | `ROLE_NOT_ACCEPTING_MEMBERS` | The role is closed to new members. |
 | `ROLE_HAS_MEMBERS` | The role cannot be removed while members remain. |
 
-## Common Starting Points
+## Common Starting Tasks
 
-Start with these pages before deeper SAGE examples:
+Start with these operations before building deeper SAGE flows:
 
 - Create or fetch a profile.
 - Resolve a player name.
@@ -414,7 +421,8 @@ Start with these pages before deeper SAGE examples:
 - Create a role and invite a member.
 - Understand profile permissions used by SAGE.
 
-Once those are clear, SAGE pages can reference profile validation without re-explaining the identity model each time.
+These operations establish the profile-validation context reused by SAGE
+instructions.
 
 ## Star Atlas Identity Layer
 

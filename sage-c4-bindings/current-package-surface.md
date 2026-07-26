@@ -1,6 +1,7 @@
 # Current Package Surface
 
-This page records the package surface used by these docs.
+This reference records the package versions and generated surface used by the
+examples on this site.
 
 Use it when checking whether an example is still on the current generated-client line.
 
@@ -19,7 +20,8 @@ Rechecked on 2026-07-25:
 - npm now marks `@solana/kit@7.0.0` as latest
 - the generated Star Atlas clients still peer-depend on `@solana/kit ^6.1.0`
 
-Do not follow the kit `latest` tag independently. Keep these docs on kit 6 until the generated-client peer range moves.
+Use `@solana/kit` 6 with these generated clients until their declared peer
+range changes. The npm `latest` tag is not a compatibility guarantee.
 
 ## SAGE generated surface
 
@@ -42,9 +44,10 @@ version: 0.49.0
 
 Treat those as separate version markers: npm package version for the TypeScript package, IDL version for the generated program description.
 
-## Important changes from the old docs baseline
+## Important changes since `@staratlas/dev-sage@0.45.3`
 
-The earlier docs baseline was `@staratlas/dev-sage@0.45.3`. The current line adds broad generated coverage for:
+Compared with `@staratlas/dev-sage@0.45.3`, the current line adds broad
+generated coverage for:
 
 - faction accounts, markets, ownership, relations, standing, treasury, and economics config
 - Atlas reward config, registry, treasury, and reward epoch flows
@@ -69,11 +72,11 @@ The earlier docs baseline was `@staratlas/dev-sage@0.45.3`. The current line add
   lines, and warp-lane access.
 - Mission and quest helpers expose technical process state, but their generated
   names alone do not define the complete player-facing rules.
-- Encounter and combat-reward helpers should be introduced as combat and reward
-  plumbing until live C4 behavior provides a verified end-to-end workflow.
+- Encounter and combat-reward helpers expose combat and reward plumbing. Their
+  generated names do not establish a verified end-to-end gameplay flow.
 
-See [Extended C4 Systems](/sage-c4-bindings/extended-systems) for the reader-
-facing map of these account families.
+See [Extended C4 Systems](/sage-c4-bindings/extended-systems) for a map of
+these account families.
 
 ## Breaking or migration-sensitive details
 

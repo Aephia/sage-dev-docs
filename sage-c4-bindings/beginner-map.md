@@ -102,7 +102,7 @@ An instruction asks a z.ink/Solana program to do something. Reading an account
 is harmless. Sending an instruction can change game state, move assets, spend
 tokens, or require a wallet signature.
 
-These docs start with read-only examples first.
+Start with read-only examples before building instructions that change state.
 
 ### Binding
 
@@ -140,7 +140,7 @@ After that, the reference-style pages will make much more sense.
 
 Reading is fine. Signing is serious.
 
-Before an example asks a wallet to sign, it should explain:
+Before asking a wallet to sign, explain:
 
 - which program is being called
 - which account will change

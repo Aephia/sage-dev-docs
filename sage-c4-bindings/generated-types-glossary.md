@@ -126,7 +126,8 @@ Some generated values represent fixed-point numbers, such as:
 - `I8F56`
 - `U16F16`
 
-These are domain values, not normal JavaScript floats. Keep them as generated values until the docs have a verified conversion helper for the exact type.
+These are domain values, not normal JavaScript floats. Keep them as generated
+values until your application has a verified conversion for the exact type.
 
 For UI display, prefer a tiny adapter with a name that includes the source type.
 

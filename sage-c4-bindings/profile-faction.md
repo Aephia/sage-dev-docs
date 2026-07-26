@@ -60,11 +60,15 @@ Profile Faction is a small foundation program:
 - one PDA helper
 - one `Faction` generated type
 
-SAGE imports and uses faction concepts in gameplay account types, including fleet-related data. Document this package early so SAGE examples can talk about faction requirements without pretending faction state lives inside SAGE itself.
+SAGE imports and uses faction concepts in gameplay account types, including
+fleet-related data. The faction selection remains in the Profile Faction
+account rather than becoming SAGE-owned state.
 
 Faction choice is game-significant. Treat `chooseFaction` as a real gameplay action and verify current PTR behavior before presenting it as a simple setup step.
 
-Star Atlas has historically treated major faction choice as account-bound and permanent. Keep that context in the UI copy even while PTR-specific mutation rules are being verified.
+Star Atlas has historically treated major faction choice as account-bound and
+permanent. Warn users about that significance while PTR-specific mutation
+rules are being verified.
 
 ## Ecosystem role
 
@@ -77,7 +81,8 @@ This page covers:
 - how the generated `Faction` type appears in SAGE account data
 - where faction context matters for fleets, starbases, combat, and resource competition
 
-Keep policy claims cautious until PTR behavior confirms whether a user can choose, reselect, or mutate faction state.
+Do not assume a user can reselect or mutate faction state until current PTR
+behavior confirms it.
 
 ## Generated surface
 
@@ -287,7 +292,9 @@ There is currently one faction permission flag:
 - Parser: `parseChooseFactionInstruction`
 - Permission wrapper: `ProfileFactionPermissions`
 
-The first state-changing example should be careful: choosing a faction may be irreversible or game-significant depending on PTR rules. The generated client can build the instruction, but live behavior and signing policy should be verified before publishing a send example.
+Choosing a faction may be irreversible or game-significant depending on
+current PTR rules. Verify live behavior and signing policy before sending the
+generated instruction.
 
 ## Faction Layer
 
