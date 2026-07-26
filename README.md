@@ -53,9 +53,10 @@ pnpm build
 | `.vitepress/theme/` | Small theme and CSS customizations |
 | `public/` | Static images copied into the built site |
 
-The published content currently covers connection setup, generated client
-installation, account reads, program architecture, gameplay domains, and
-transaction-building workflows for the SAGE C4 public PTR.
+The published content covers the application-to-binding mental model,
+connection setup, generated client installation, shared terminology, account
+hierarchies, live account reads, gameplay domains, extended C4 systems, and
+transaction-review workflows for the SAGE C4 public PTR.
 
 ## Contributing
 

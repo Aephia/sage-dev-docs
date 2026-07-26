@@ -8,6 +8,11 @@ SAGE C4 is a major expansion and update of SAGE. For developers, its on-chain st
 
 Read them as a layered system. Player Profile answers "who is acting?", Profile Faction answers "which faction is this profile aligned with?", and SAGE answers "what game state is being read or changed?"
 
+For a beginner-first diagram, start with the
+[Beginner Map](/sage-c4-bindings/beginner-map). For exact PDA, stored-field,
+nested-data, and instruction-only relationships, use the
+[Account Relationship Map](/sage-c4-bindings/account-relationship-map).
+
 ## SAGE C4 in Star Atlas
 
 SAGE C4 is the strategic gameplay layer of Star Atlas as a live browser game and public test realm. It models an on-chain economy where players operate fleets, move through star systems, mine and scan for resources, haul cargo, craft goods, trade through local markets, upgrade starbases, place claim stakes, and compete through faction-sensitive systems.
@@ -129,3 +134,6 @@ Explorer:      https://explorer.z.ink
 ```
 
 Treat PTR behavior as test-realm behavior: useful for integration, not a permanent mainnet contract.
+
+See [Programs, Accounts, and Terms](/sage-c4-bindings/concepts-and-terms) for
+the application-to-program layers used throughout this page.

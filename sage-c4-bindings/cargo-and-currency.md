@@ -4,7 +4,21 @@ Cargo and currency accounts are the accounting layer used by fleets, starbases, 
 
 For beginners: SAGE does not expose one generic inventory account in this package. Instead, cargo-like state appears inside domain accounts such as `Fleet`, `StarbasePlayer`, `LocalMarket`, `ClaimStakeInstance`, `CraftingHabInstance`, and `CraftingProcess`. The package also includes cache accounts for cargo definitions and currency configuration.
 
-Star Atlas KB material describes resources as the materials that keep fleets operational, feed crafting, support trading, and contribute to starbase upkeep and upgrades. In the generated SAGE C4 clients, that game idea appears as cargo ids, cargo pods, resource definitions, and currency vault/accounting fields.
+Resources keep fleets operational, feed crafting, support trading, and
+contribute to starbase upkeep and upgrades. In the generated SAGE C4 clients,
+that game idea appears as cargo ids, cargo pods, resource definitions, and
+currency vault/accounting fields.
+
+::: info Position in the account hierarchy
+**Owned by:** SAGE program through `@staratlas/dev-sage`<br>
+**Definition roots:** `CargoDefinitionsCache` and `CurrencyConfigCache`, each derived from `Game`<br>
+**Nested player state:** cargo pods and balances live inside Fleet, StarbasePlayer, ClaimStakeInstance, CraftingHabInstance, CraftingProcess, and LocalMarket data<br>
+**Connects to:** almost every resource, production, logistics, and trading workflow
+:::
+
+There is no single universal “inventory account” in these bindings. First
+identify the domain owner of the cargo, then use the definition caches to turn
+ids and raw amounts into application-facing names and denominations.
 
 ## Developer use
 
@@ -272,3 +286,12 @@ fleet state: unchanged unless simulation logs say otherwise
 Reading caches is safe. Sending cargo or currency instructions can move assets, consume resources, update vaults, or change cache/config state.
 
 Cargo examples should always name the source, destination, cargo id, amount, signer, writable accounts, and simulation output before they become send examples.
+
+## Related pages
+
+- [Fleets](/sage-c4-bindings/fleets) for fuel, ammunition, and fleet cargo pods
+- [Starbases](/sage-c4-bindings/starbases) for player-local storage
+- [Crafting](/sage-c4-bindings/crafting) for input and output cargo
+- [Local Markets](/sage-c4-bindings/local-markets) for cargo and ATLAS escrow
+- [Programs, Accounts, and Terms](/sage-c4-bindings/concepts-and-terms) for
+  PDAs, nested data, writable accounts, and denominations

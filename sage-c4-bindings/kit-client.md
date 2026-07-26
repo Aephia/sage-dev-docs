@@ -6,6 +6,17 @@ Start with one explicit PTR client and pass it into generated fetch helpers.
 
 If you are new to this: the client is the object your code uses to ask the z.ink testnet for account data. It does not sign anything by itself.
 
+The layers are:
+
+```txt
+generated fetch helper
+  -> @solana/kit RPC client
+  -> z.ink RPC endpoint
+  -> encoded account response
+  -> generated decoder
+  -> typed account data
+```
+
 ## Create the PTR client
 
 ```ts
@@ -19,13 +30,20 @@ export const sagePtr = {
 
 Use `sagePtr.rpc` for generated account fetches.
 
-The next example reads a Player Profile account. Replace `PROFILE_ADDRESS_HERE` with a real Player Profile account address when you have one.
+## Run a real generated read
+
+The next example reads a known Jorvik non-player-character (NPC) Player Profile
+used by the live C4 Nemesis Engine. The profile address is stable even though
+the individual fleets it owns are recreated regularly, so the example can be
+run without first connecting a wallet or finding your own profile.
 
 ```ts
 import { address } from '@solana/kit';
 import { fetchMaybeProfile } from '@staratlas/dev-player-profile';
 
-const profileAddress = address('PROFILE_ADDRESS_HERE');
+const profileAddress = address(
+	'B8PCrai4bqyoR5VAcjFnLixQXejVNReNw6JunbeEACLj'
+);
 const profile = await fetchMaybeProfile(sagePtr.rpc, profileAddress, {
 	commitment: 'confirmed'
 });
@@ -36,6 +54,11 @@ if (!profile.exists) {
 
 console.log(profile.data.authKeyCount);
 ```
+
+This proves that the RPC client and generated Player Profile binding work
+together. Continue with [Reading Live Game State](/sage-c4-bindings/reading-game-state)
+to discover current Fleet accounts owned by this profile, then decode one with
+the SAGE binding.
 
 ## Account fetch shape
 
@@ -69,6 +92,10 @@ Start with read-only account calls:
 - they give you real account data for future transaction examples
 
 State-changing instruction examples should come after the read path is documented and after every account role is clear.
+
+See [Programs, Accounts, and Terms](/sage-c4-bindings/concepts-and-terms) for
+the distinction between programs, accounts, PDAs, discovery, and instruction
+building.
 
 ::: warning RPC data is external input
 Generated decoders are useful, but RPC responses still cross a trust boundary. Validate existence, owner expectations, and account role before using decoded data to make signing decisions.

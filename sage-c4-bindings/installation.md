@@ -71,3 +71,7 @@ For a beginner, think of it like this:
 - Player Profile is the identity card.
 - Profile Faction is the faction stamp on that identity.
 - SAGE is the game board and the actions happening on it.
+
+Continue with [`@solana/kit` Client](/sage-c4-bindings/kit-client) for a live
+generated read. If “binding,” “program,” “account,” or “PDA” is new, use
+[Programs, Accounts, and Terms](/sage-c4-bindings/concepts-and-terms).

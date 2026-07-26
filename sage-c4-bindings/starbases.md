@@ -4,9 +4,24 @@ Starbases are the main station-like infrastructure in SAGE.
 
 In game terms, starbases are places where players and factions interact with storage, crafting, repair, upgrades, respawn, movement, and conflict.
 
-Star Atlas KB material describes SAGE resources as inputs for crafting, trading, and starbase upkeep/upgrades. Starbases are the place where many of those loops converge: fleets dock there, cargo is stored there, crafting is run there, and upgrade contributions affect faction infrastructure.
+SAGE resources feed crafting, trading, and starbase upkeep and upgrades.
+Starbases are where many of those loops converge: fleets dock there, cargo is
+stored there, crafting is run there, and upgrade contributions affect faction
+infrastructure.
 
 In the C4 region model, starbases also drive territory. Owning and upgrading starbases affects whether systems and regions become usable faction space, and destroying low-tier starbases can change control. Treat starbase instructions as strategic actions even when the generated builder name sounds like a local repair or upgrade.
+
+::: info Position in the account hierarchy
+**Owned by:** SAGE program through `@staratlas/dev-sage`<br>
+**World parent:** `Starbase` is nested inside `StarSystem.starbase`; it has no standalone account address<br>
+**Player state:** `StarbasePlayer` is derived from `StarSystem` + `Character`<br>
+**Activity state:** `StarbaseUpgradeProcess` records one upgrade contribution<br>
+**Connects to:** fleets, cargo, crafting, local markets, repair, respawn, faction ownership, and combat
+:::
+
+This split is easy to miss: read `StarSystem` for the shared starbase, and
+`StarbasePlayer` for one character's ships, crew, cargo, and queues at that
+location.
 
 ## Developer use
 
@@ -249,3 +264,15 @@ Before sending a starbase transaction, show:
 Reading starbase accounts is safe. Sending starbase instructions can change shared strategic state, consume resources, affect faction conflict, or alter upgrade progress.
 
 Keep starbase send examples conservative until PTR behavior has been verified directly.
+
+## Related pages
+
+- [World Data](/sage-c4-bindings/world-data) for StarSystem and nested
+  Starbase state
+- [Character and Progression](/sage-c4-bindings/character-progression) for the
+  Character used to derive StarbasePlayer
+- [Cargo and Currency](/sage-c4-bindings/cargo-and-currency) for player-local
+  storage and resource definitions
+- [Crafting](/sage-c4-bindings/crafting) and
+  [Local Markets](/sage-c4-bindings/local-markets) for major starbase-local
+  activity

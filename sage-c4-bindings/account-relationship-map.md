@@ -3,6 +3,12 @@
 This page answers a practical question: **which address or seed value do I need
 first to reach the next account?**
 
+If the difference between a program, account, PDA, stored-field join, or
+indexer is unfamiliar, read
+[Programs, Accounts, and Terms](/sage-c4-bindings/concepts-and-terms) first.
+The [Beginner Map](/sage-c4-bindings/beginner-map) shows the simplified
+identity-to-gameplay hierarchy.
+
 It is based on the generated sources in `@staratlas/dev-sage@0.52.0`,
 `@staratlas/dev-player-profile@0.45.7`, and
 `@staratlas/dev-profile-faction@0.45.7`. The map distinguishes four relationships

@@ -4,7 +4,16 @@ Scanning is an exploration action. A fleet uses a scan pattern against the curre
 
 Use this as the canonical review pattern for chance/result workflows: read fleet and scan-pattern context, build the instruction, summarize costs and writable accounts, simulate the full transaction, then show cooldown and loot diff targets before asking for a signature.
 
-The KB frames scan output as part of the active economy, not just loot UX. SDUs and discovered resources can feed Infrastructure Contract recipes and other ATLAS-earning loops, so scan review should show why a result matters beyond the immediate transaction.
+Scan output is part of the active economy, not just loot user experience.
+Survey Data Units (SDUs) and discovered resources can feed recipes and other
+ATLAS-earning loops, so scan review should show why a result matters beyond the
+immediate transaction.
+
+::: warning Scaffold, not a copy-paste transaction
+The snippets below show the verified account and review shape. Your application
+must resolve live Fleet, Character, ScanPattern, optional encounter accounts,
+and the complete transaction before simulation or sending.
+:::
 
 ## What Scan Touches
 

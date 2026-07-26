@@ -6,6 +6,19 @@ In Star Atlas terms, this is the player identity layer. A wallet signs, but a pr
 
 For SAGE C4 developers, Player Profile is the first account model to understand before fleets, crafting, cargo, claim stakes, or markets. Most player-facing SAGE instructions validate a profile and a `keyIndex` before they mutate game state.
 
+::: info Position in the account hierarchy
+**Owned by:** Player Profile program through `@staratlas/dev-player-profile`<br>
+**Created as:** a signer-created account, not a PDA derived from the wallet<br>
+**Child accounts:** PlayerName, Role, and ProfileRoleMembership PDAs<br>
+**Downstream:** Profile Faction derives from Profile; SAGE Character derives from Profile + Game<br>
+**Purpose in SAGE writes:** prove which profile key and permission scope authorize the instruction
+:::
+
+See [Read Identity and Faction](/sage-c4-bindings/read-identity-and-faction)
+for the shortest read path and the
+[Account Relationship Map](/sage-c4-bindings/account-relationship-map) for the
+exact address relationships.
+
 ## Developer use
 
 Use this page when you need to:

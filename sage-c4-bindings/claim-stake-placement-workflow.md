@@ -6,6 +6,12 @@ Use this as the canonical review pattern for infrastructure-placement workflows:
 
 In the C4 economy, claim stakes are production infrastructure on celestial bodies. They produce resources into limited local storage, and fleets must interact with individual stakes when transferring resources out, so placement review should include the body, production intent, storage expectation, and local fleet/starbase path.
 
+::: warning Scaffold, not a copy-paste transaction
+The snippets below show the verified account and review shape. Your application
+must resolve the selected definition, hub building, world/player accounts,
+signers, and full transaction before simulation or sending.
+:::
+
 ## What Placement Touches
 
 ```ts

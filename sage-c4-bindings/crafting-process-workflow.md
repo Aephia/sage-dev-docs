@@ -6,6 +6,12 @@ Use this as the canonical review pattern for production workflows: read recipe a
 
 Keep the economy context visible: crafted outputs can feed starbase upgrades, local markets, and Infrastructure Contracts, which are one of the loops that turn active production and SDU demand into ATLAS payouts.
 
+::: warning Scaffold, not a copy-paste transaction
+The snippets below show the verified account and review shape. Placeholder
+addresses and signers must be resolved by your application, and simulation
+requires a complete encoded transaction rather than one instruction object.
+:::
+
 ## What Start Crafting Touches
 
 ```ts

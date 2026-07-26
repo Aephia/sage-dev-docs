@@ -202,3 +202,13 @@ export function toFleetSummary(fleet: {
 ```
 
 This keeps UI code readable and makes it obvious where generated account data becomes application data.
+
+## Related terminology
+
+This glossary covers generated TypeScript value shapes. For program, account,
+PDA, discriminator, discovery, signer, writable-account, sysvar, sentinel, and
+simulation concepts, see
+[Programs, Accounts, and Terms](/sage-c4-bindings/concepts-and-terms).
+
+For the way generated account addresses connect, see the
+[Account Relationship Map](/sage-c4-bindings/account-relationship-map).

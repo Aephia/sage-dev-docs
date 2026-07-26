@@ -2,8 +2,10 @@
 
 This page connects the two foundation programs used by SAGE examples:
 
-- Player Profile stores player identity, keys, roles, and player names.
-- Profile Faction stores which faction a profile is enlisted with.
+- [Player Profile](/sage-c4-bindings/player-profile) stores player identity,
+  keys, roles, and player names.
+- [Profile Faction](/sage-c4-bindings/profile-faction) stores which faction a
+  profile is enlisted with.
 
 The examples are read-only. They can be used against the SAGE C4 PTR on the z.ink testnet without signing a transaction.
 
@@ -129,7 +131,10 @@ enum Faction {
 }
 ```
 
-In Star Atlas gameplay terms, choosing MUD, ONI, or Ustur is strategic identity, not a cosmetic preference. The KB treats major faction choice as account-bound and historically permanent, so apps should avoid presenting faction state as a casual toggle unless the current PTR flow explicitly says otherwise.
+In Star Atlas gameplay terms, choosing MUD, ONI, or Ustur is strategic identity,
+not a cosmetic preference. Major faction choice has historically been
+account-bound and permanent, so apps should avoid presenting faction state as
+a casual toggle unless the current PTR flow explicitly says otherwise.
 
 ## How this fits SAGE
 
@@ -162,3 +167,8 @@ Read examples can be run freely against PTR RPC. Do not turn these snippets into
 - which accounts are writable
 - which assets, cargo, fleet state, or faction state can change
 - a simulation step before asking a wallet to sign
+
+Continue with [Character and Progression](/sage-c4-bindings/character-progression)
+to derive the game-specific player account, then use the
+[Account Relationship Map](/sage-c4-bindings/account-relationship-map) to
+resolve StarbasePlayer, Fleet, and world state.

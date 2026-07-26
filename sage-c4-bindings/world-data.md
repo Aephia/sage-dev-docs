@@ -6,7 +6,21 @@ This layer gives developers the map context needed by fleets, starbases, mining,
 
 In Star Atlas terms, this is the galaxy context that gameplay happens inside. Fleets move between star systems, starbases live inside systems, celestial bodies host claim-stake and mining context, and regions provide map-scale boundaries.
 
-For C4, regions are not just labels on the map. The Star Atlas KB frames them around King Systems, Core Systems, safe/border/neutral state, starbase ownership, battle lines, and faction-controlled warp lanes. That makes `RegionTracker`, `StarSystem`, and `Starbase` data strategic context for movement and conflict, not just coordinates.
+For C4, regions are not just labels on the map. King Systems, Core Systems,
+safe, border, and neutral state, starbase ownership, battle lines, and
+faction-controlled warp lanes make `RegionTracker`, `StarSystem`, and
+`Starbase` data strategic context for movement and conflict, not just
+coordinates. The official
+[C4 PTR map guide](https://support.staratlas.com/hc/en-us/articles/52243941755923-How-to-Use-the-C4-PTR-Map)
+shows how territory, borders, bases, and warp lanes appear to players.
+
+::: info Position in the account hierarchy
+**Owned by:** SAGE program through `@staratlas/dev-sage`<br>
+**Root:** `Game` stores global configuration and definition tables<br>
+**Map:** `RegionTracker`, `StarSystem`, and `CelestialBody` are separate accounts derived from game-scoped ids<br>
+**Nested infrastructure:** `Starbase` is decoded inside `StarSystem.starbase`<br>
+**Connects to:** every location-sensitive fleet, mining, claim-stake, crafting, market, territory, and combat workflow
+:::
 
 ## Developer use
 
@@ -205,3 +219,12 @@ World-data instruction builders are mostly admin/configuration flows.
 Reading world-data accounts is safe. Sending world-data instructions is admin-level work: it can change shared map state, game rules, ship definitions, starbase topology, or production tables.
 
 Do not use send examples for these instructions until the authority model, writable accounts, and PTR simulations are clear.
+
+## Related pages
+
+- [Account Relationship Map](/sage-c4-bindings/account-relationship-map) for
+  Game, StarSystem, CelestialBody, RegionTracker, and nested Starbase links
+- [Starbases](/sage-c4-bindings/starbases) for shared and player-local
+  starbase state
+- [Extended C4 Systems](/sage-c4-bindings/extended-systems) for faction
+  ownership, King Systems, regions, and territory

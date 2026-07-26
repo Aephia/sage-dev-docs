@@ -6,6 +6,18 @@ In Star Atlas terms, faction is part of the player's strategic identity. SAGE ac
 
 For SAGE C4 developers, Profile Faction is the second foundation layer after Player Profile: it answers which side the profile belongs to before gameplay accounts such as fleets, characters, starbase players, and claim stakes are interpreted.
 
+::: info Position in the account hierarchy
+**Owned by:** Profile Faction program through `@staratlas/dev-profile-faction`<br>
+**Derived from:** Player Profile address<br>
+**Stores:** the selected major faction enum for that profile<br>
+**Downstream:** used as context by SAGE Character, Fleet, StarbasePlayer, claim-stake, territory, and combat flows<br>
+**Not the same as:** SAGE's dynamic faction ownership, standing, relation, market, and reward accounts
+:::
+
+See [Read Identity and Faction](/sage-c4-bindings/read-identity-and-faction)
+for the combined read path and [Extended C4 Systems](/sage-c4-bindings/extended-systems)
+for the separate in-game faction-state accounts.
+
 ## Developer use
 
 Use this page when you need to:

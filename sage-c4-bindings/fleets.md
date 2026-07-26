@@ -6,7 +6,22 @@ In game terms, a fleet is a group of ships controlled by a player profile. Fleet
 
 Fleet workflows sit at the center of SAGE because they connect movement, starbases, resources, crafting, progression, and faction conflict.
 
-The Star Atlas KB also makes crew part of this picture: ships alone are not the whole gameplay gate. Crew Cards, crew assignment, faction assignment, stations, and perks explain why newer fleet and crafting builders include crew-binding and roster state.
+Ships alone are not the whole gameplay gate. Crew Cards, crew assignment,
+faction assignment, stations, and perks explain why newer fleet and crafting
+builders include crew-binding and roster state.
+
+::: info Position in the account hierarchy
+**Owned by:** SAGE program through `@staratlas/dev-sage`<br>
+**Scoped by:** `Game` and owner `Profile`<br>
+**Player context:** `Character`, `ProfileFactionAccount`, and often `StarbasePlayer`<br>
+**Derived from:** game address, owner-profile address, and the exact 64-byte fleet label<br>
+**Connects to:** cargo pods, star systems, starbases, claim stakes, crew, combat, mining, and scanning
+:::
+
+If the exact label is unknown, discover fleets by discriminator plus `gameId`
+or `ownerProfile`, then decode them. See the
+[Account Relationship Map](/sage-c4-bindings/account-relationship-map) for the
+difference between derivation and discovery.
 
 ## Developer use
 

@@ -8,19 +8,39 @@ This section focuses on developer integration: what to import, which cluster to 
 
 If you are new to z.ink/Solana development or SAGE, start with the [Beginner Map](/sage-c4-bindings/beginner-map). It explains the basic nouns before the code samples start using them.
 
-## Reader promise
+## What these bindings are
 
-These docs are organized for developers who want to build against the on-chain Star Atlas and SAGE C4 programs without already knowing the generated clients.
+The packages in these docs are generated TypeScript bindings for three
+on-chain programs. They translate between application code and the binary
+addresses, account data, and instructions understood by those programs.
 
-Each program and domain page should answer, in order:
+```mermaid
+flowchart LR
+  ui["Tool, app, bot, or agent"]
+  generated["Generated Star Atlas binding"]
+  kit["@solana/kit"]
+  rpc["z.ink RPC"]
+  program["On-chain program"]
+  state["Program-owned accounts"]
 
-1. what the concept means in Star Atlas
-2. what the program or account model owns on-chain
-3. how to read useful state with `@solana/kit`
-4. how state-changing instructions are structured
-5. which accounts, signers, writable state, and simulations matter before sending
+  ui --> generated --> kit --> rpc --> program --> state
+  state --> rpc --> kit --> generated --> ui
+```
 
-Reference inventory still matters, but it should support the workflow instead of leading it.
+The bindings provide:
+
+- account decoders and typed fetch helpers
+- Program Derived Address (PDA) helpers for accounts with known seeds
+- instruction builders with ordered account metadata
+- generated enums, codecs, parsers, and error definitions
+
+They do **not** discover every account, hold wallet keys, explain game policy,
+or decide whether a transaction is safe. Discovery may require known
+addresses, PDA seeds, program-account queries, transaction history, or an
+indexer. Signing and sending remain application responsibilities.
+
+See [Programs, Accounts, and Terms](/sage-c4-bindings/concepts-and-terms) for
+the vocabulary used throughout the site.
 
 ## Star Atlas context
 
@@ -73,12 +93,13 @@ Keep the endpoint visible in examples while the PTR is moving. Hidden global clu
 
 ## Reading paths
 
-If you are new to the game and the programs:
+If you are new to the game, the programs, or generated bindings:
 
 1. [Beginner Map](/sage-c4-bindings/beginner-map)
-2. [Read Identity and Faction](/sage-c4-bindings/read-identity-and-faction)
-3. [SAGE Gameplay Overview](/sage-c4-bindings/sage-gameplay-overview)
-4. [Transaction Review and Account Diffs](/sage-c4-bindings/transaction-review-and-diffs)
+2. [Installation](/sage-c4-bindings/installation)
+3. [`@solana/kit` client](/sage-c4-bindings/kit-client)
+4. [Reading Live Game State](/sage-c4-bindings/reading-game-state)
+5. [SAGE Gameplay Overview](/sage-c4-bindings/sage-gameplay-overview)
 
 If you are building a tool:
 
